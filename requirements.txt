@@ -1,0 +1,14 @@
+
+reflex==0.8.17a1
+psycopg[binary]>=3.1.8
+geoalchemy2>=0.18
+reflex-google-auth
+pymongo
+supabase
+pandas
+numpy
+scikit-learn
+matplotlib
+reportlab
+openpyxl
+reflex-enterprise
