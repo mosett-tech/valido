@@ -6,6 +6,7 @@ from app.components.loyalty_dashboard import loyalty_dashboard
 from app.components.navigation import navigation
 from app.components.notification_preferences import notification_preferences
 from app.states.notification_state import NotificationState, Notification
+from app.components.landing_page import landing_page
 
 
 def index() -> rx.Component:
@@ -14,6 +15,10 @@ def index() -> rx.Component:
         rx.el.main(fraud_dashboard(), class_name="p-4 md:p-8"),
         class_name="font-['Inter'] bg-gray-50 min-h-screen",
     )
+
+
+def landing() -> rx.Component:
+    return rx.el.div(landing_page(), class_name="font-['Inter'] bg-white")
 
 
 def analytics() -> rx.Component:
@@ -115,6 +120,7 @@ app = rxe.App(
     ],
 )
 app.add_page(index)
+app.add_page(landing, route="/landing")
 app.add_page(analytics, route="/analytics")
 app.add_page(notifications, route="/notifications")
 from app.components.claims_dashboard import claims_dashboard

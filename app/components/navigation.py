@@ -24,6 +24,7 @@ def navigation() -> rx.Component:
                 class_name="flex items-center gap-3",
             ),
             rx.el.div(
+                nav_button("Home", "/landing"),
                 nav_button("Fraud Dashboard", "/"),
                 nav_button("Analytics", "/analytics"),
                 nav_button("Loyalty", "/loyalty"),
